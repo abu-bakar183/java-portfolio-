@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        section {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        /* Project Section */
+        .project-list {
+            list-style: none;
+            padding: 0;
+        }
+        .project-list li {
+            background: #ddd;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .project-list li:hover {
+            background: #bbb;
+        }
+        /* Button */
+        .btn {
+            display: inline-block;
+            background: #333;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        My Portfolio
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <p>Hello! I am a passionate developer skilled in HTML, CSS, and JavaScript. This is my portfolio showcasing my work.</p>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <ul class="project-list">
+            <li onclick="showProjectDetails('Weather App')">Weather App</li>
+            <li onclick="showProjectDetails('To-Do List')">To-Do List</li>
+            <li onclick="showProjectDetails('Portfolio Website')">Portfolio Website</li>
+        </ul>
+        <p id="project-details"></p>
+    </section>
+
+    <section>
+        <h2>Contact</h2>
+        <p>Email: your.email@example.com</p>
+        <p>GitHub: <a class="btn" href="https://github.com/yourgithub" target="_blank">Visit GitHub</a></p>
+    </section>
+
+    <script>
+        function showProjectDetails(projectName) {
+            document.getElementById('project-details').innerText = "You selected: " + projectName;
+        }
+    </script>
+
+</body>
+</html>
